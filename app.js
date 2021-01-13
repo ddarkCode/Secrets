@@ -12,7 +12,7 @@ const findOrCreate = require( 'mongoose-findorcreate' );
 
 const app = express();
 
-mongoose.connect( 'mongodb://localhost:27017/usersDB', { useNewUrlParser: true, useUnifiedTopology: true } );
+mongoose.connect( `mongodb+srv://admin-ugoh:${process.env.DATABASE_PASSWORD}@cluster0.lirx1.mongodb.net/usersDB`, { useNewUrlParser: true, useUnifiedTopology: true } );
 
 app.set( 'view engine', 'ejs' );
 app.use( express.static( 'public' ) );
